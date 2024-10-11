@@ -1,0 +1,293 @@
+/* Загальний стиль для сторінки */ 
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    height: 100vh;
+    position: relative;
+    cursor: url('images/cats_paw.png'), auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #eeffd4; /* фон */
+    background-size: cover;
+}
+
+
+
+.pagination {
+    position: absolute; /* або relative/fixed */
+    top: 476%; /* від верхнього краю */
+    left: 55%; /* від лівого краю */
+    transform: translate(-50%, -50%); /* для центрованого позиціонування */
+}
+
+
+.pagination a {
+    text-decoration: none;
+    color: rgb(181, 181, 181);
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background 0.3s;
+}
+
+.pagination a.active {
+    background-color: #009653;
+    color: rgb(255, 255, 255);
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #c4ffbc;
+}
+
+.pagination a.prev, .pagination a.next {
+    font-weight: bold;
+}
+
+
+
+/* Контейнер для фільтрів */
+.filter-container {
+    width: 20%;
+    padding: 10px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    margin-top: 80px; /* Додаємо відступ зверху */
+    border-radius: 20px; /* Округлення всіх кутів на 10 пікселів */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для глибини */
+    width: 20%; /* Наприклад, фільтри займають 20% екрану */
+    float: left; /* Фільтри ліворуч */
+}
+
+.filter-container h4 {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.filter-container svg {
+    margin-right: 10px;
+}
+
+/* Секції фільтрів */
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-options {
+    margin-top: 10px;
+}
+
+/* Приховати стандартні радіокнопки */
+input[type="radio"] {
+    display: none;
+}
+
+/* Стилі для активної опції */
+input[type="radio"]:checked + label {
+    background-color: #bada55;
+    color: white; /* Однаковий колір */
+}
+
+.filter-option {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-option:hover {
+    background-color: #f0f0f0;
+}
+
+/* Селектор */
+.filter-select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-size: 16px;
+}
+
+
+/* Картки тварин */
+.animal-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 0; /* Прибрали верхній відступ */
+    width: 75%; /* Карточки займають решту простору */
+    float: right; /* Розташування праворуч від фільтрів */
+    margin: 90px 0;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+    width: 210px;
+    margin: 15px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація при зміні */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Підйом картки на 5 пікселів при наведенні */
+    box-shadow: 0 4px 10px rgba(31, 71, 43, 0.5); /* Збільшення тіні */
+}
+
+.description {
+    display: flex; /* Використовуємо flexbox */
+    flex-wrap: wrap; /* Дозволяє елементам обгортатися */
+}
+
+.description span {
+    width: 50%; /* Кожен span займатиме 50% ширини контейнера */
+    color: #0b711e; /* Колір слів */
+    font-size: 16px; /* Розмір шрифту */
+    margin-bottom: 10px; /* Відстань між словами */
+    box-sizing: border-box; /* Включає padding та border у загальну ширину */
+}
+
+
+.card img {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+
+
+
+
+.banner {
+    background-color: #fff;
+    padding: 15px 10px; /* Додаємо трохи більше відступів для шапки */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Встановлюємо flexbox для вирівнювання елементів */
+    justify-content: space-between; /* Простір між елементами шапки */
+    align-items: center; /* Вирівнювання по вертикалі */
+}
+
+/* Стиль для логотипу */
+.logo {
+    display: flex;
+    align-items: center; /* Вирівнювання логотипу та тексту по вертикалі */
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 5px; /* Відступ між логотипом і текстом */
+}
+
+/* Навігаційне меню */
+.navigation {
+    display: flex; /* Вирівнюємо елементи меню горизонтально */
+    gap: 20px; /* Відступи між пунктами меню */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 50px;
+}
+
+.navigation a:hover {
+    color: #5C46A2;
+}
+
+/* Стиль для кнопки "Підтримати" */
+.support-button .button {
+    background-color: #5C46A2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.support-button .button:hover {
+    background-color: #04fa87;
+}
+
+.dropdown {
+    position: relative; /* Дозволяє дочірнім елементам позиціонуватися */
+}
+
+.dropbtn {
+    padding: 14px 16px; /* Відступи для кнопки */
+    display: inline-block; /* Дозволяє використовувати padding */
+}
+
+.dropdown-content {
+    display: none; /* Сховати контент за замовчуванням */
+    position: absolute; /* Випадаюче меню буде відносно кнопки */
+    background-color: #f9f9f9; /* Колір фону */
+    min-width: 160px; /* Мінімальна ширина меню */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Тінь */
+    z-index: 1; /* Щоб меню було поверх інших елементів */
+}
+
+.dropdown-content a {
+    color: black; /* Колір тексту */
+    padding: 12px 16px; /* Відступи для пунктів меню */
+    text-decoration: none; /* Без підкреслення */
+    display: block; /* Відображення в блочному стилі */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Показати меню при наведенні на батьківський елемент */
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd; /* Фон пункту при наведенні */
+}
+
+.arrow-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #7d93a549;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.arrow-up svg {
+    fill: rgb(255, 255, 255);
+    width: 24px;
+    height: 24px;
+}
+
+.arrow-up:hover {
+    background-color: #41435a72;
+    cursor: url('/images/cursor2.png'), auto; /* Шлях до кастомного курсора */
+}

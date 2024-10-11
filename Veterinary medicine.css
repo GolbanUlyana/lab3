@@ -1,0 +1,589 @@
+/* Загальний стиль для сторінки */ 
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    height: 200vh;
+    position: relative;
+    cursor: url('images/cats_paw.png'), auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff8e6; /* фон */
+    background-size: cover;
+}
+
+
+/* Контейнер для таблиці результатів */
+.results-table {
+    max-width: 800px; /* Максимальна ширина таблиці */
+    margin: 0 auto; /* Центрування таблиці по горизонталі */
+    padding-left: 100px; /* Відступ зліва */
+    padding-right: 100px; /* Відступ справа */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Контейнер для результатів */
+.results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/* Окремий елемент результату */
+.result-item {
+    flex: 1;
+    margin: 0 20px;
+}
+
+/* Стиль для числа */
+.result-number {
+    font-size: 3em;
+    font-weight: bold;
+    color: #630000;
+}
+
+/* Стиль для тексту під числом */
+.result-text {
+    font-size: 1.1em;
+    font-weight: normal;
+    color: #333;
+    margin-top: 10px;
+}
+
+.hero-section {
+    position: relative;
+    background-color: #fdd87d;
+    padding: 120px;
+    height: 50vh;
+    display: flex; /* Додаємо Flexbox */
+    align-items: center; /* Вирівнювання по вертикалі */
+    justify-content: space-between; /* Вирівнювання по горизонталі */
+    margin-top: 10px; /* Додаємо відступ зверху */
+    clip-path: polygon(0 0, 100% 0, 100% 78%, 80% 78%, 50% 79%, 30% 84%, 0 84%);
+    margin-top: 20px; /* Якщо потрібно, щоб опустити банер */
+}
+
+/* Контейнер для тексту */
+.text-container {
+    max-width: 50%; /* Обмеження ширини тексту */
+    z-index: 2; /* Для перекриття зображень */
+}
+
+.text-container h1 {
+    font-size: 8em;
+    color: #000000;
+    font-weight: bold;
+    margin: 0;
+}
+
+.text-container p {
+    font-size: 1.5em;
+    color: #000000;
+    margin: 20px 0;
+}
+
+/* Стилізація для зображень */
+.image-container {
+    display: flex; /* Використання flex для зображень */
+    flex-wrap: wrap; /* Дозволяє зображенням переходити на новий рядок */
+    gap: 20px; /* Відступ між зображеннями */
+    max-width: 50%; /* Обмеження ширини контейнера зображень */
+    z-index: 1; /* Під текстом */
+    margin-top: 120px; /* Додаємо відступ зверху, щоб опустити зображення вниз */
+}
+
+.image-container img {
+    width: 150px;
+    height: 50px;
+    border-radius: 50%; /* Закруглення зображень */
+    object-fit: cover; /* Обрізає зображення для збереження пропорцій */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для зображень */
+}
+
+.cta-button {
+    background-color: #8e0606; /* Колір фону кнопки */
+    color: #ffffff; /* Колір тексту */
+    border: none; /* Без рамки */
+    border-radius: 50px; /* Закруглені кути */
+    padding: 15px 30px; /* Внутрішні відступи */
+    font-size: 16px; /* Розмір шрифта */
+    cursor: pointer; /* Змінює курсор на вказівник */
+    border: 2px solid #8e0606; /* Рамка */
+    transition: background-color 0.8s; /* Плавний перехід кольору */
+}
+
+.cta-button:hover {
+    background-color: #ff9d9d; /* Колір фону при наведенні */
+}
+
+
+.consultation-steps {
+    text-align: center;
+    background-color: #fff8e6;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.consultation-steps h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-left: -400px; /* Загальний відступ зліва між усіма картками */
+    margin: 20px; /* Стандартний відступ між усіма картками */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    position: relative;
+}
+
+
+/* Зменшення бічних відступів між четвертою та п'ятою карткою */
+.steps-container .step:nth-child(4) {
+    margin-right: 10px; /* Зменшення відступу праворуч у четвертої картки */
+}
+
+.steps-container .step:nth-child(5) {
+    margin-left: -400px; /* Зменшення відступу ліворуч у п'ятої картки */
+}
+
+
+
+.step-icon {
+    background-color: #fdd87d;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: -25px;
+    left: 20px;
+}
+
+.step-content {
+    margin-top: 40px;
+}
+
+.step-content p {
+    color: #333;
+}
+
+.step-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.step-content ul li {
+    color: #333;
+    margin-top: 5px;
+}
+
+
+
+
+.guinea-pig-container {
+    position: absolute;
+    top: 170%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Для того, щоб зображення було перед іншими елементами */
+}
+
+.guinea-pig-container img {
+    width: 290px; /* Ширина зображення, налаштуйте за бажанням */
+    height: auto; /* Щоб зберегти пропорції зображення */
+}
+
+
+
+
+.footer {
+    background-color: #322734;
+    color: #000000;
+    padding: 5px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 120px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 100px;
+    justify-content: flex-end; /* Вирівнює колонки справа */
+    flex-grow: 1;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbbbbb;
+}
+
+
+.banner {
+    background-color: #fff;
+    padding: 15px 10px; /* Додаємо трохи більше відступів для шапки */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Встановлюємо flexbox для вирівнювання елементів */
+    justify-content: space-between; /* Простір між елементами шапки */
+    align-items: center; /* Вирівнювання по вертикалі */
+}
+
+/* Стиль для логотипу */
+.logo {
+    display: flex;
+    align-items: center; /* Вирівнювання логотипу та тексту по вертикалі */
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 5px; /* Відступ між логотипом і текстом */
+}
+
+/* Навігаційне меню */
+.navigation {
+    display: flex; /* Вирівнюємо елементи меню горизонтально */
+    gap: 20px; /* Відступи між пунктами меню */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 50px;
+}
+
+.navigation a:hover {
+    color: #5C46A2;
+}
+
+/* Стиль для кнопки "Підтримати" */
+.support-button .button {
+    background-color: #5C46A2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.support-button .button:hover {
+    background-color: #04fa87;
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.dropdown {
+    position: relative; /* Дозволяє дочірнім елементам позиціонуватися */
+}
+
+.dropbtn {
+    padding: 14px 16px; /* Відступи для кнопки */
+    display: inline-block; /* Дозволяє використовувати padding */
+}
+
+.dropdown-content {
+    display: none; /* Сховати контент за замовчуванням */
+    position: absolute; /* Випадаюче меню буде відносно кнопки */
+    background-color: #f9f9f9; /* Колір фону */
+    min-width: 160px; /* Мінімальна ширина меню */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Тінь */
+    z-index: 1; /* Щоб меню було поверх інших елементів */
+}
+
+.dropdown-content a {
+    color: black; /* Колір тексту */
+    padding: 12px 16px; /* Відступи для пунктів меню */
+    text-decoration: none; /* Без підкреслення */
+    display: block; /* Відображення в блочному стилі */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Показати меню при наведенні на батьківський елемент */
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd; /* Фон пункту при наведенні */
+}
+
+
+
+.main-container {
+    background-color: #fdd87d;
+    display: flex; /* Додайте це для горизонтального вирівнювання */
+    justify-content: space-between; /* Розміщення між елементами */
+    align-items: flex-start; /* Вертикальне вирівнювання на верхній частині */
+    padding: 60px; /* Відступи для контейнера */
+    border-radius: 200px; /* Закруглення країв */
+    margin-top: 60px; /* Встановіть відступ зверху */
+}
+
+
+.left-content {
+    width: 50%; /* Ширина лівої частини */
+}
+    
+
+
+h1 {
+    color: #000000; /* Колір заголовка */
+    font-size: 32px; /* Розмір шрифта заголовка */
+}
+
+p {
+    font-size: 18px; /* Розмір шрифта для параграфів */
+    color: #333333; /* Колір тексту параграфів */
+}
+
+.contact-options {
+    margin-top: 20px; /* Відступ для блоку з контактами */
+}
+
+
+button {
+    display: flex; /* Зберігає кнопки в одному рядку */
+    justify-content: center; /* Вирівнює кнопки по центру */
+    flex-wrap: wrap; /* Дозволяє кнопкам переходити на новий рядок, якщо потрібно */
+    align-items: center; /* Вертикальне вирівнювання */
+    margin: 5px; /* Встановіть менший відступ */
+    padding: 10px; /* Залиште внутрішні відступи помірними */
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button svg {
+    width: 20px; /* Задайте однакову ширину */
+    height: 20px; /* Задайте однакову висоту */
+    margin-right: 8px; /* Відступ між іконкою і текстом */
+}
+
+
+/* Стилі для кнопок */
+.phone-btn {
+    background-color: #fdd87d; /* Початковий колір фону */
+    color: rgb(0, 0, 0); /* Початковий колір тексту */
+    border-color: #000000; /* Колір рамки */
+    width: 180px; /* Ширина кнопки */
+    height: 50px; /* Висота кнопки */
+    margin-left: 20px; /* Відступ зліва */
+}
+
+.phone-btn:hover {
+    background-color: #000000; /* Колір фону при наведенні */
+    color: #fff; /* Колір тексту при наведенні */
+    border-color: #000000; /* Колір рамки при наведенні */
+}
+
+/* Стиль для тексту з робочими годинами */
+.working-hours {
+    margin-top:70px; /* Відступ зверху */
+    font-size: 19px; /* Розмір шрифта */
+    color: #000000; /* Колір тексту */
+    text-align: center; /* Вирівнювання тексту по центру */
+    margin-left: 150px; /* Відступ зліва */
+}
+
+/* Стилі для кнопки інструкції */
+.instruction-btn {
+    padding: 10px 15px; /* Внутрішні відступи */
+    background-color: #fdd87d; /* Колір фону кнопки */
+    color: #671d1d; /* Колір тексту */
+    border: 2px solid #671d1d; /* Рамка */
+    border-radius: 50px; /* Закруглені кути */
+    margin-top: 10px; /* Відступ зверху */
+    margin-left: 90px; /* Відступ зліва */
+    cursor: pointer; /* Змінює курсор на вказівник */
+    width: 250px; /* Ширина кнопки */
+    height: 60px; /* Висота кнопки */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавний перехід кольору */
+    text-align: center; /* Вирівнювання тексту */
+}
+
+.instruction-btn:hover {
+    background-color: #671d1d; /* Колір фону при наведенні */
+    color: rgb(255, 255, 255); /* Колір тексту при наведенні */
+}
+
+.calendar-container {
+    margin-right: 30px; /* Відступ справа */
+    display: inline-block; /* Вирівнювання по горизонталі */
+    padding: 10px; /* Внутрішні відступи */
+    border-radius: 10px; /* Закруглені кути */
+    display: flex;
+    flex-direction: column; /* Вирівнювання по вертикалі */
+}
+
+.calendar {
+    background-color: #ffffff; /* Колір фону календаря */
+    background-color: #fff; /* Додайте фоновий колір */
+    border-radius: 0 0 20px 20px; /* Закруглені нижні кути */
+    padding: 15px; /* Внутрішні відступи */
+    border-radius: 10px; /* Закруглені кути */
+    position: relative; /* Позиціонування для дочірніх елементів */
+    width: 400px; /* Ширина календаря */
+    height: auto; /* Автоматична висота */
+}
+
+
+
+.calendar h4 {
+    font-size: 20px; /* Розмір заголовка */
+    margin-bottom: 10px; /* Відступ знизу */
+    padding-left: 10px; /* Відступ зліва */
+}
+
+table {
+    width: 100%; /* Таблиця займає всю ширину календаря */
+    border-collapse: collapse; /* Згортає кордони таблиці */
+    margin-top: 10px; /* Відступ зверху */
+}
+
+thead th {
+    color: #333; /* Колір заголовків таблиці */
+    padding: 10px; /* Внутрішні відступи для заголовків */
+}
+
+.calendar td {
+    padding: 10px; /* Внутрішні відступи для клітинок */
+    text-align: center; /* Вирівнювання тексту в клітинках */
+    cursor: pointer; /* Змінює курсор при наведенні */
+    transition: background-color 0.3s ease; /* Плавний перехід фону */
+}
+
+tbody td {
+    padding: 15px; /* Внутрішні відступи для клітинок */
+    text-align: center; /* Вирівнювання тексту в клітинках */
+    font-size: 16px; /* Розмір шрифта */
+    border: 1px solid #ffffff; /* Кордон між клітинками */
+    color: rgb(125, 125, 125); /* Колір тексту */
+    background-color: #f0f0f0; /* Колір фону клітинок */
+}
+
+.calendar-footer {
+    background-color: transparent; /* Прозорий фон */
+    padding: 0; /* Без відступів */
+    text-align: left; /* Вирівнювання тексту по лівому краю */
+}
+
+.next-step-btn {
+    background-color: #ffffff; /* Колір фону кнопки */
+    color: red; /* Колір тексту */
+    border: none; /* Без рамки */
+    font-size: 16px; /* Розмір шрифта */
+    font-weight: bold; /* Жирний текст */
+    cursor: pointer; /* Змінює курсор на вказівник */
+    display: flex; /* Для горизонтального вирівнювання тексту та іконки */
+    align-items: center; /* Вертикальне вирівнювання */
+    margin-left: 0; /* Відступ зліва */
+    padding: 10px 20px; /* Внутрішні відступи */
+    border-radius: 5px; /* Закруглені кути */
+}
+
+.next-step-btn::after {
+    content: '➔'; /* Додатковий символ для кнопки */
+    margin-left: 8px; /* Відступ зліва для символу */
+    font-size: 16px; /* Розмір шрифта для символу */
+}
+
+.calendar-header {
+    display: flex; /* Використання flex для заголовка календаря */
+    justify-content: space-between; /* Розміщення елементів по краях */
+    align-items: center; /* Вирівнює елементи по центру вертикально */
+    padding: 10px; /* Внутрішні відступи заголовка */
+    background-color: #ffffff; /* Колір фону заголовка */
+    border-bottom: 1px solid #ccc; /* Лінія під заголовком */
+}
+
+.nav-button {
+    background-color: transparent; /* Прозорий фон для кнопок */
+    border: none; /* Без рамки */
+    font-size: 24px; /* Розмір шрифта для стрілок */
+    cursor: pointer; /* Показує курсор при наведенні */
+    padding: 5px; /* Внутрішні відступи */
+}
+
+.arrow-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #7d93a549;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.arrow-up svg {
+    fill: rgb(255, 255, 255);
+    width: 24px;
+    height: 24px;
+}
+
+.arrow-up:hover {
+    background-color: #41435a72;
+    cursor: url('/images/cursor2.png'), auto; /* Шлях до кастомного курсора */
+}
